@@ -1,0 +1,21 @@
+function validateForm() {
+const password = document.getElementById("password").value.trim();
+const confirmPassword = document.getElementById("confirmPassword").value.trim();
+const formMessage = document.getElementById("form-message");
+
+http://formMessage.style.color = "red";
+
+if (password.length < 6) {
+formMessage.textContent = "Password must be at least 6 characters long.";
+return false;
+}
+
+if (password !== confirmPassword) {
+formMessage.textContent = "Passwords do not match.";
+return false;
+}
+
+http://formMessage.style.color = "green";
+formMessage.textContent = "Registration successful!";
+return true;
+}
